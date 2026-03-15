@@ -1,7 +1,8 @@
 streamlit
-xarray
-netcdf4
 numpy
 pandas
 plotly
-gtts
+xarray
+netcdf4
+h5netcdf
+h5py
