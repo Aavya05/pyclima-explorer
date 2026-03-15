@@ -81,3 +81,7 @@ Download the demo recording here:
 ## 🚀 Live Application
 https://pyclima-explorer.streamlit.app/
 
+## Test data
+https://drive.google.com/file/d/1wl2y45Q9oOYe2UPS1_LgEiYxMJ6AifX3/view?usp=sharing
+
+
