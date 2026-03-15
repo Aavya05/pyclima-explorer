@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script src="https://unpkg.com/three"></script>
+<script src="https://unpkg.com/globe.gl"></script>
+
+<style>
+
+body{
+margin:0;
+background:black;
+}
+
+#globeViz{
+width:100vw;
+height:100vh;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="globeViz"></div>
+
+<script>
+
+const points = DATA_PLACEHOLDER;
+
+const globe = Globe()(document.getElementById('globeViz'))
+  .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+  .backgroundImageUrl('https://unpkg.com/three-globe/example/img/night-sky.png')
+  .heatmapsData([{ points: points }])
+  .heatmapPointLat(d => d.lat)
+  .heatmapPointLng(d => d.lng)
+  .heatmapPointWeight(d => d.value)
+  .onGlobeClick((coords) => {
+    try {
+      if (!window.parent) return;
+      const url = new URL(window.parent.location);
+      if (coords && typeof coords.lat === 'number' && typeof coords.lng === 'number') {
+        url.searchParams.set('lat', coords.lat.toFixed(2));
+        url.searchParams.set('lon', coords.lng.toFixed(2));
+      }
+      window.parent.location = url.toString();
+    } catch (e) {
+      console.log('Globe click handler error', e);
+    }
+  });
+
+globe.controls().autoRotate = true;
+globe.controls().autoRotateSpeed = 0.6;
+
+</script>
+
+</body>
+
+</html>
