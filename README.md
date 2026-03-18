@@ -73,10 +73,7 @@ When using a NetCDF file:
   - Sea Level Pressure / Sea Level → `msl`, `sea_level_pressure`, `slp`, …
 
 If no matching variable is found, the first data variable is used as a fallback.
-## 🎥 Project Demo Video
 
-Download the demo recording here:  
-[https://drive.google.com/file/d/1jqeWjV5vDJv-gTMN9zD6voCA7WR2ZUlm/view?usp=sharing](https://drive.google.com/file/d/13hO-LsYUDwVujQxZRZWuONFLpGlWdpqI/view?usp=sharing)
 
 ## 🚀 Live Application
 https://pyclima-explorer.streamlit.app/
