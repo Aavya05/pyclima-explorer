@@ -1,6 +1,6 @@
 ## PyClimaExplorer
 
-An interactive Streamlit dashboard for rapid climate data exploration, built for the **Hack It Out – PyClimaExplorer** challenge.
+An interactive Streamlit dashboard for rapid climate data exploration, PyClimaExplorer.
 
 ### Features
 
